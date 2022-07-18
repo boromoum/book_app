@@ -22,7 +22,6 @@ class BooksServices implements BookRepo {
     Uri uri = Uri.http(_baseUrl, _GET_BOOKS);
     Response response = await http
         .get(uri, headers: <String, String>{'authorization': basicAuth});
-    print("${response.body}");
     List<Book> books = bookFromJson(response.body);
     print("book: ${books.length}");
     return books;

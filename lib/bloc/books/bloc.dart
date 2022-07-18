@@ -23,7 +23,6 @@ class BooksBloc extends Bloc<BookEvents, BooksState> {
   ) async {
     try {
       emit(BooksLoading());
-
       final books = await bookRepo?.getBookList();
       emit(BooksLoaded(books: books));
     } on SocketException {
