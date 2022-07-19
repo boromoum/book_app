@@ -13,7 +13,9 @@ class BooksBloc extends Bloc<BookEvents, BooksState> {
   final BookRepo? bookRepo;
   List<Book>? books;
 
-  BooksBloc({this.bookRepo}) : super(BooksInitState()) {
+  BooksBloc({
+    this.bookRepo,
+  }) : super(BooksInitState()) {
     on<BookEvents>(_onGetAllPokemons);
   }
 

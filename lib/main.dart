@@ -1,5 +1,6 @@
 import 'package:book_app/api/services.dart';
 import 'package:book_app/bloc/books/bloc.dart';
+import 'package:book_app/bloc/books1/bloc.dart';
 import 'package:book_app/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => BooksBloc(bookRepo: BooksServices())),
+        BlocProvider(create: (context) => BooksBloc1()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -33,6 +33,7 @@ dependencies:
   http: 0.13.3
   bloc_concurrency: 0.2.0
   cupertino_icons: ^1.0.2
+  stream_transform: 2.0.0
 
 dev_dependencies:
   flutter_test:

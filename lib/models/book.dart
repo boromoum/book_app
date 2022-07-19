@@ -18,17 +18,18 @@ class Book {
   String? wikipediaLink;
   String? imageUrl;
 
-  Book(
-      {this.id,
-      this.title,
-      this.author,
-      this.realYears,
-      this.year,
-      this.country,
-      this.language,
-      this.pages,
-      this.wikipediaLink,
-      this.imageUrl});
+  Book({
+    this.id,
+    this.title,
+    this.author,
+    this.realYears,
+    this.year,
+    this.country,
+    this.language,
+    this.pages,
+    this.wikipediaLink,
+    this.imageUrl,
+  });
 
   Book.fromJson(Map<String, dynamic> json) {
     id = json['id'];
